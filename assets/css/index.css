@@ -516,6 +516,7 @@ header .nav-bar {
 
 .footer-section {
     padding: 90px 0 45px 0;
+    border-top: 1px solid rgb(245, 245, 247)
 }
 
 .footer-section h2 {
