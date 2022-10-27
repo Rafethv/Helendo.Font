@@ -123,6 +123,12 @@
     background-color: #000;
     color: #fff;
     padding: 10px 35px;
+    transition: .3s all ease-in;
+}
+
+.cart-clear-container a:hover {
+    background-color: rgb(34, 34, 34);
+    transition: .3s all ease-out;
 }
 
 .cart-clear-container button {
@@ -130,6 +136,15 @@
     border: none;
     padding: 10px 35px;
     border: 1px solid #000;
+    transition: .3s all ease-in;
+}
+
+.cart-clear-container button:hover {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 35px;
+    border: 1px solid #000;
+    transition: .3s all ease-in;
 }
 
 .cart-total-section {
@@ -144,6 +159,7 @@
     padding: 12px 0;
     font-weight: 600;
 }
+
 
 .cart-total-section .cart-total {
     width: 100%;
