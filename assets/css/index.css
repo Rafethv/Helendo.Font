@@ -29,6 +29,85 @@ header .nav-bar {
     align-items: center;
 }
 
+.menu-modal {
+    display: none;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.menu-modal.active {
+    display: block;
+}
+
+.menu-modal.active .menu-sidebar {
+    position: fixed;
+    right: 0;
+    transition: .3s all ease-in;
+}
+
+.menu-modal .menu-sidebar {
+    width: 400px;
+    background-color: #fff;
+    z-index: 30;
+    position: absolute;
+    top: 0;
+    right: -500px;
+    bottom: 0;
+    transition: .3s all ease-in;
+    padding: 20px;
+    overflow-y: scroll;
+
+}
+
+.menu-modal .menu-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-modal .menu-sidebar .menu-close {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.menu-modal .menu-sidebar .menu-close button {
+    background-color: transparent;
+    border: none;
+    transition: .1s all ease-in;
+}
+
+.menu-modal .menu-sidebar .menu-close button:hover i {
+    color: #FFD700;
+    transition: .1s all ease-out;
+}
+
+.menu-modal .menu-sidebar ul {
+    list-style-type: none;
+    padding: 40px 0;
+}
+
+.menu-modal .menu-sidebar ul li {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.menu-modal .menu-sidebar ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    transition: .2s all ease-in;
+}
+
+.menu-modal .menu-sidebar ul li a:hover {
+    background-color: rgb(153, 153, 153, 0.5);
+    transition: .2s all ease-out;
+}
+
+
 .nav-bar__search {
     border-bottom: 1px solid #000;
 }
@@ -71,10 +150,20 @@ header .nav-bar {
     transition: .3s all ease-in;
 }
 
+.nav-bar__navigation .navigation-lists li button  {
+    background-color: transparent;
+    border: none;
+    transition: .3s all ease-in;
+}
+
+.nav-bar__navigation .navigation-lists li button:hover i {
+    color: rgb(220, 177, 74);
+    transition: .3s all ease-out;
+}
+
 .nav-bar__navigation .navigation-lists li a:hover i {
     color: rgb(220, 177, 74);
     transition: .3s all ease-out;
-
 }
 
 .nav-bar__navigation .navigation-lists li a i {
@@ -452,6 +541,7 @@ header .nav-bar {
 .blog-section .blog-blogs {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .blog-section .blog-blogs .card {
